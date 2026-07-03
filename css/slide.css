@@ -1,0 +1,54 @@
+*{padding: 0; margin: 0;}
+
+body{height: 100vh; width: 100vw;}
+main{display: flex; flex-direction: column; height: auto; padding: 20px;}
+.list{margin: 0 25%; background-color: rgba(255,255,255,0.85); border-radius: 10px;}
+
+/*--- --- ---*/
+
+.card{
+    display: flex; align-items: center; padding: 10px; height: auto; width: 1000px;
+    box-sizing: border-box;
+}
+
+.slide-texto{display: block; box-sizing: border-box; padding: 40px;}
+h2,.pontos li{color: #000;}
+
+/*--- --- ---*/
+
+.slider-wrapper{
+    position: relative;
+    max-width: 30vw;
+    margin: 0 auto;
+}
+.slider{
+    aspect-ratio: 15/10;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    width: 300px;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}
+.slider-nav a{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-color: #fff;
+    box-shadow: 0 0 1px #000;
+    background-color: #fff;
+    transition: ease 250ms;
+}
+.slider-nav a:hover{background-color: rgba(255, 165, 00, 0.5);}
